@@ -17,24 +17,32 @@ RUN wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst
     chmod +x hst-install.sh
 
 RUN bash hst-install.sh \
-    --interactive no \
-    --hostname hestia.example.com \
-    --email admin@local.test \
-    --username admin \
-    --password admin123 \
-    --lang en \
-    --apache no \
-    --named no \
-    --clamav no \
-    --spamassassin no \
-    --multiphp no \
-    --vsftpd no \
-    --proftpd no \
-    --postgresql no \
-    --sieve no \
-    --quota no \
-    --webterminal no \
-    --api yes
+  --interactive no \
+  --hostname hestia.example.com \
+  --email admin@local.test \
+  --username admin \
+  --password admin123 \
+  --lang en \
+  --apache yes \
+  --phpfpm yes \
+  --multiphp no \
+  --vsftpd yes \
+  --proftpd no \
+  --named yes \
+  --mysql yes \
+  --mysql8 no \
+  --postgresql no \
+  --exim yes \
+  --dovecot yes \
+  --sieve no \
+  --clamav yes \
+  --spamassassin yes \
+  --iptables yes \
+  --fail2ban yes \
+  --quota no \
+  --webterminal no \
+  --api yes
+
 
 
 EXPOSE 8083
