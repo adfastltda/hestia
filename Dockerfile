@@ -18,7 +18,7 @@ RUN wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst
 
 RUN bash hst-install.sh \
     --interactive no \
-    --hostname hestia.local \
+    --hostname hestia.example.com \
     --email admin@local.test \
     --username admin \
     --password admin123 \
@@ -35,6 +35,7 @@ RUN bash hst-install.sh \
     --quota no \
     --webterminal no \
     --api yes
+
 
 EXPOSE 8083
 
